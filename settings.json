@@ -1,7 +1,7 @@
 {
   "bot": {
     "name": "CHISA",
-    "phoneNumber": "8801806365125",
+    "phoneNumber": "8801806XXXXXX",
     "customPairingCode": "",
     "thumbnail": "public/thumbnail.jpg",
     "groupJid": "",
@@ -13,7 +13,7 @@
     "organization": "CHISA",
     "id": "8801806XXXXXX",
     "report": true,
-    "co": ["8801963XXXXX"]
+    "co": ["880193XXXXXX"]
   },
   "sticker": {
     "packname": "CHISA",
