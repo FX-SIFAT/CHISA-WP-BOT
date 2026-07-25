@@ -1,0 +1,44 @@
+{
+  "name": "CHISA",
+  "version": "1.0.0",
+  "description": "Advanced WhatsApp Bot — CHISA",
+  "main": "chisa.js",
+  "directories": {
+    "commands": "commands/cmd",
+    "events": "commands/event",
+    "handlers": "src/handlers",
+    "utils": "src/utils"
+  },
+  "scripts": {
+    "start": "node chisa.js",
+    "dev": "node chisa.js",
+    "setup": "npm install"
+  },
+  "keywords": [
+    "whatsapp-bot",
+    "CHISA",
+    "SIFAT"
+  ],
+  "author": "SIFAT",
+  "license": "MIT",
+  "dependencies": {
+    "@cacheable/node-cache": "^3.1.1",
+    "@ginkohub/speedtest-js": "^0.0.2",
+    "@neoxr/helper": "^2.3.14",
+    "wp-heart": "^1.0.0",
+    "axios": "^1.18.1",
+    "axios-retry": "^4.5.0",
+    "cfonts": "^3.3.1",
+    "didyoumean": "^1.2.2",
+    "glob": "^13.0.6",
+    "jimp": "^1.6.1",
+    "link-preview-js": "^4.0.4",
+    "moment-timezone": "^0.6.3",
+    "pino": "^10.3.1",
+    "qrcode-terminal": "^0.12.0",
+    "simpl.db": "^2.13.0",
+    "vcard-parser": "^1.0.0",
+    "wa-sticker-formatter": "^4.4.4",
+    "protobufjs": "^7.2.5"
+  }
+}

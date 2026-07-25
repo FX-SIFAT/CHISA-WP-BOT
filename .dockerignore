@@ -1,0 +1,39 @@
+# Dependencies (installed fresh in Docker)
+node_modules/
+
+# Runtime data — never bake into image
+session/
+session.json
+data/
+
+# Secrets & environment
+.env
+.env.*
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Replit-specific
+.replit
+.cache/
+.local/
+.agents/
+attached_assets/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Docs & misc
+*.md
+README*
+LICENSE
+thumbnail.jpg
+
+# CI / deploy configs (not needed inside image)
+railway.json
+render.yaml
+render.yml
+.dockerignore

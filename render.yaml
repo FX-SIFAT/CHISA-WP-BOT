@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: CHISA
+    env: docker
+    region: singapore
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_OPTIONS
+        value: --max-old-space-size=512
+    healthCheckPath: /api/status
+    autoDeploy: true
+    disk:
+      name: chisa-persistent
+      mountPath: /app/session
+      sizeGB: 1

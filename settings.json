@@ -1,0 +1,68 @@
+{
+  "bot": {
+    "name": "CHISA",
+    "phoneNumber": "8801806365125",
+    "customPairingCode": "",
+    "thumbnail": "public/thumbnail.jpg",
+    "groupJid": "",
+    "groupLink": "https://chat.whatsapp.com/FuyoDJWuOvM5g5HuU4SpT1",
+    "prefix": ","
+  },
+  "owner": {
+    "name": "SIFAT",
+    "organization": "CHISA",
+    "id": "8801806XXXXXX",
+    "report": true,
+    "co": ["8801963XXXXX"]
+  },
+  "sticker": {
+    "packname": "CHISA",
+    "author": "SIFAT"
+  },
+  "msg": {
+    "admin": "This command can only be used by group admins!",
+    "banned": "You are banned from using this bot!",
+    "botAdmin": "Bot must be a group admin to use this command!",
+    "botGroupMembership": "You must join the bot's group first!",
+    "coin": "You don't have enough coins to use this command!",
+    "cooldown": "This command is on cooldown, please wait a moment...",
+    "group": "This command can only be used inside a group!",
+    "groupSewa": "This group has not subscribed. Bot is inactive here.",
+    "owner": "This command can only be used by the bot owner!",
+    "premium": "This command is for premium users only!",
+    "private": "This command can only be used in private chat!",
+    "privatePremiumOnly": "Private chat usage is restricted to premium users.",
+    "gamerestrict": "Game commands are currently restricted to group admins and the owner.",
+    "restrict": "This command is currently restricted!",
+    "unavailableAtNight": "Bot is unavailable from 12 AM to 6 AM. Please try later.",
+    "footer": "CHISA — by SIFAT ♡",
+    "wait": "Please wait...",
+    "notFound": "Nothing found! Please try again.",
+    "urlInvalid": "Invalid URL! Please provide a valid link."
+  },
+  "system": {
+    "authAdapter": "multi",
+    "usePairingCode": true,
+    "alwaysOnline": true,
+    "antiBug": true,
+    "antiCall": true,
+    "autoRead": true,
+    "autoTypingOnCmd": true,
+    "cooldown": 5000,
+    "loggerLevel": "silent",
+    "maxListeners": 50,
+    "port": 5000,
+    "privatePremiumOnly": false,
+    "requireBotGroupMembership": false,
+    "requireGroupSewa": false,
+    "restrict": false,
+    "selfReply": true,
+    "suppressBaileys": true,
+    "timeZone": "Asia/Dhaka",
+    "unavailableAtNight": false,
+    "useCoin": true,
+    "useStore": false,
+    "useServer": true,
+    "WAVersion": null
+  }
+}

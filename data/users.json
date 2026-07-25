@@ -1,0 +1,72 @@
+[
+  {
+    "jid": "2251150127222@lid",
+    "__id": "db169635-ea6f-4240-b2fe-3d2c8abc4892"
+  },
+  {
+    "jid": "143559701323908@lid",
+    "__id": "aa10029f-716e-40ac-bcd7-3bb938afa292",
+    "pushName": "Kuze",
+    "coin": 100
+  },
+  {
+    "jid": "195034817257689@lid",
+    "__id": "70a1a532-2724-4835-af59-156b5f645197",
+    "pushName": "Waiting 21",
+    "coin": 100
+  },
+  {
+    "jid": "61955591114819@lid",
+    "__id": "6978b587-38b9-4eff-9147-9dfb5485bb8d",
+    "xp": 20,
+    "level": 1,
+    "pushName": "🍓 😋",
+    "banned": false,
+    "coin": 8888
+  },
+  {
+    "jid": "66667187019967@lid",
+    "__id": "0ccd7ab4-f7ad-4285-882b-91659b70c2a3",
+    "banned": true,
+    "pushName": "Raj Gamer",
+    "coin": 100
+  },
+  {
+    "jid": "208779031404553@lid",
+    "__id": "4a585c2c-d8e7-4930-b481-f2aa2c86bcd0",
+    "pushName": "md harun"
+  },
+  {
+    "jid": "251990764474498@lid",
+    "__id": "8e249c3b-8080-4821-8680-4615e2fc16e4",
+    "pushName": "kotha",
+    "coin": 100,
+    "banned": true
+  },
+  {
+    "jid": "79801029271608@lid",
+    "__id": "ce1aea8e-cf84-4d11-b5c5-d763fb863176",
+    "pushName": "Yeasin Arafat Deaf 🖤",
+    "coin": 40,
+    "xp": 0,
+    "level": 1
+  },
+  {
+    "jid": "116153800220774@lid",
+    "__id": "285a8193-b30b-4ffa-9711-39c7cd28781d",
+    "pushName": "—͞FX SIFAT !¡",
+    "coin": 100,
+    "xp": 10,
+    "level": 9,
+    "lastSentMsg": {
+      "role2": 1784843662343
+    }
+  },
+  {
+    "jid": "217338716651523@lid",
+    "__id": "441d2a8f-aa8b-4a53-a4bf-bab8b9966de2",
+    "pushName": "🩶─⃝‌‌Sɪʏꫝᴍ 💌",
+    "coin": 100,
+    "xp": 10
+  }
+]
