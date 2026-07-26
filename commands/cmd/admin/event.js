@@ -253,7 +253,7 @@ async function doList(ctx) {
 module.exports = {
     name: "event",
     aliases: ["ev", "evt"],
-    category: "maker",
+    category: "admin",
     description: "Advanced event handler manager — install, delete, update, source, info, list",
     usage: "event <sub> [args]",
     permissions: { owner: true },
@@ -296,7 +296,7 @@ module.exports = {
                 return doInstall(ctx, code, nameHint);
             }
 
-            // Inline code paste: ,event install myhandler <code>
+            
             if (url && !tools.cmd.isUrl(url)) {
                 const nameHint = url;
                 const rest = ctx.text?.trim().replace(/^install\s+\S+\s*/i, "") || "";
