@@ -40,7 +40,7 @@ function loadMod(filePath) {
     } catch { return null; }
 }
 
-// Returns ALL command objects from a file (single or array export)
+
 function loadAllMods(filePath) {
     try {
         delete require.cache[require.resolve(filePath)];
@@ -167,14 +167,14 @@ async function doInstall(ctx, code, forceOverwrite = false) {
     const allNames = allFreshMods.map(m => m.name).join(", ");
     const allAliases = allFreshMods.flatMap(m => m.aliases || []).join(", ") || "—";
     return ctx.reply(
-        `╔══[ ✅ *Command${allFreshMods.length > 1 ? "s" : ""} ${forceOverwrite ? "Overwritten" : "Installed"}* ]\n${LINE}\n` +
+        `╔═[ ✅ *Command${allFreshMods.length > 1 ? "s" : ""} ${forceOverwrite ? "Overwritten" : "Installed"}* ]\n${LINE}\n` +
         `  🏷️  Name(s)     : ${formatter.bold(allNames)}\n` +
         `  🔗 Aliases     : ${allAliases}\n` +
         `  📂 Category    : ${formatter.inlineCode(cat)}\n` +
         `  📦 Size        : ${fmtSize(stat?.size || 0)}\n` +
         `  📄 File        : ${formatter.inlineCode(`commands/cmd/${cat}/${safeName}.js`)}\n` +
         `${LINE}\n` +
-        `${tools.msg.info("⚡ Hot-loaded — active immediately, no restart needed!")}`
+        `${tools.msg.info("⚡ ")}`
     );
 }
 
@@ -187,7 +187,7 @@ async function doDelete(ctx, name) {
     const found = findFile(name);
     if (!found) return ctx.reply(tools.msg.info(`❌ Command ${formatter.inlineCode(name)} not found.`));
 
-    // Unregister ALL commands from this file (handles array exports)
+    
     const allMods = loadAllMods(found.full);
     for (const m of allMods) hotUnregister(m.name);
     fs.unlinkSync(found.full);
@@ -211,7 +211,7 @@ async function doDelete(ctx, name) {
         `  🏷️  Name(s) : ${formatter.bold(allNames)}\n` +
         `  📄 File    : ${formatter.inlineCode(found.rel)}\n` +
         `${LINE}\n` +
-        `${tools.msg.info("⚡ Hot-unloaded — removed from memory immediately.")}`
+        `${tools.msg.info("⚡ removed from memory immediately.")}`
     );
 }
 
@@ -232,7 +232,7 @@ async function doReload(ctx, name) {
             `╔══[ 🔄 *All Commands Reloaded* ]\n${LINE}\n` +
             `  ✅ ${count} command(s) reloaded from disk.\n` +
             `${LINE}\n` +
-            `${tools.msg.info("⚡ All active — no restart needed.")}`
+            `${tools.msg.info("⚡ All active ")}`
         );
     }
 
@@ -268,7 +268,7 @@ async function doDisable(ctx, name) {
     const found = findFile(name);
     if (!found) return ctx.reply(tools.msg.info(`❌ Command ${formatter.inlineCode(name)} not found on disk.`));
 
-    // Disable ALL commands from this file (handles array exports)
+    
     const allMods = loadAllMods(found.full);
     if (!allMods.length) return ctx.reply(tools.msg.info(`❌ Command ${formatter.inlineCode(name)} not found or not loaded.`));
 
@@ -302,7 +302,7 @@ async function doEnable(ctx, name) {
         return ctx.reply(tools.msg.info(`⚠️ File not found on disk. Removed from disabled list.`));
     }
 
-    // Enable ALL commands from this file (handles array exports)
+
     const allMods = loadAllMods(found.full);
     for (const m of allMods) {
         hotRegister(m);
@@ -462,7 +462,7 @@ async function doList(ctx, keyword) {
 module.exports = {
     name: "cmd",
     aliases: ["command"],
-    category: "maker",
+    category: "admin",
     description: "Advanced command manager — install, delete, reload, disable, enable, update, source, list",
     usage: "cmd <sub> [args]",
     permissions: { owner: true },
