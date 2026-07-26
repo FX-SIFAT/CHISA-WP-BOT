@@ -1,8 +1,13 @@
 "use strict";
 
+const axios = require("axios");
+
 async function sendAnime(ctx, endpoint, react) {
     await ctx.replyReact(react);
-    const { buffer } = await tools.api.getBinary(endpoint);
+    const data = await tools.api.get(endpoint);
+    if (!data?.url) throw new Error("No image returned");
+    const res = await axios.get(data.url, { responseType: "arraybuffer" });
+    const buffer = Buffer.from(res.data);
     await ctx.replyReact("✅");
     await ctx.reply({ image: buffer, caption: "" });
 }
